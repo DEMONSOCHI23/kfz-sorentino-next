@@ -1,0 +1,10 @@
+[
+  {
+    "kind": "notes",
+    "items": [
+      "Shell DNS resolution to mt-avto.ru was unavailable in this environment.",
+      "The page clone intentionally does not require downloaded binaries to run.",
+      "If DNS/network is available later, replace this manifest with real asset URLs and download targets."
+    ]
+  }
+]
