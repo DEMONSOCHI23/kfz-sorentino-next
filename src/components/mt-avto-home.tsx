@@ -70,13 +70,14 @@ export function MtAvtoHome() {
               <WrenchWheelIcon className="h-6 w-6" />
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-white/60">DE/EN demo</p>
+              <p className="text-xs uppercase tracking-[0.28em] text-white/60">DE/EN</p>
               <p className="text-lg font-semibold tracking-[0.06em]">{t(lang, "hero_title")}</p>
             </div>
           </div>
 
           <nav className="hidden items-center gap-7 text-sm text-white/76 lg:flex">
             <a href="#services" className="hover:text-white">{t(lang, "nav_services")}</a>
+            <a href="#hours" className="hover:text-white">{lang === "de" ? "Öffnungszeiten" : "Opening hours"}</a>
             <a href="#reviews" className="hover:text-white">{t(lang, "nav_reviews")}</a>
             <a href="#contact" className="hover:text-white">{t(lang, "nav_contact")}</a>
           </nav>
@@ -102,7 +103,7 @@ export function MtAvtoHome() {
                 <a href={MAPS_URL} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs uppercase tracking-[0.25em] text-white/80">
                   {t(lang, "rating")}
                 </a>
-                <span className="rounded-full border border-[var(--site-gold)]/40 bg-[var(--site-gold)]/10 px-4 py-2 text-xs uppercase tracking-[0.22em] text-[var(--site-gold)]">One‑Page</span>
+                <span className="rounded-full border border-[var(--site-gold)]/40 bg-[var(--site-gold)]/10 px-4 py-2 text-xs uppercase tracking-[0.22em] text-[var(--site-gold)]">Frankfurt am Main</span>
               </div>
 
               <div className="max-w-3xl">
@@ -120,6 +121,9 @@ export function MtAvtoHome() {
                 </a>
                 <a href={DIRECTIONS_URL} target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#171412] transition-transform hover:-translate-y-0.5">
                   {t(lang, "cta_route")}
+                </a>
+                <a href={MAPS_URL} target="_blank" rel="noreferrer" className="inline-flex rounded-full border border-white/15 bg-white/8 px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5">
+                  {lang === "de" ? "In Google Maps" : "Open in Maps"}
                 </a>
               </div>
 
@@ -142,7 +146,7 @@ export function MtAvtoHome() {
                   <ShieldBadgeIcon className="mt-0.5 h-5 w-5 text-[var(--site-gold)]" />
                   <div>
                     <div className="text-white">{t(lang, "hours")}</div>
-                    <div className="text-white/65">{t(lang, "hours_value")}</div>
+                    <div className="text-white/65">Mo–Fr 08:30–17:00, Sa 09:00–14:00</div>
                   </div>
                 </div>
               </div>
@@ -158,7 +162,7 @@ export function MtAvtoHome() {
           <div className="grid gap-5">
             <div className="site-card overflow-hidden p-0">
               <div className="relative aspect-[4/3]">
-                <Image src="/images/hero.jpg" alt="Workshop" fill className="object-cover" priority />
+                <Image src="/images/workshop-wide.jpg" alt="Workshop" fill className="object-cover" priority />
               </div>
               <div className="p-6">
                 <p className="text-xs uppercase tracking-[0.28em] text-[var(--site-red)]">{t(lang, "services_title")}</p>
@@ -170,11 +174,14 @@ export function MtAvtoHome() {
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--site-red)]">Gallery</p>
               <div className="mt-4 grid grid-cols-2 gap-3">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[22px]">
-                  <Image src="/images/gallery-1.jpg" alt="Service" fill className="object-cover" />
+                  <Image src="/images/engine-wrench.jpg" alt="Service" fill className="object-cover" />
                 </div>
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[22px]">
-                  <Image src="/images/gallery-2.jpg" alt="Tools" fill className="object-cover" />
+                  <Image src="/images/tools-tray.jpg" alt="Tools" fill className="object-cover" />
                 </div>
+              </div>
+              <div className="mt-3 relative aspect-[16/9] overflow-hidden rounded-[22px]">
+                <Image src="/images/building-front.jpg" alt="Building" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -204,6 +211,42 @@ export function MtAvtoHome() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="hours" className="site-shell mt-18">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="site-eyebrow">{lang === "de" ? "Öffnungszeiten" : "Opening hours"}</p>
+            <h2 className="site-section-title mt-3">{lang === "de" ? "Öffnungszeiten" : "Opening hours"}</h2>
+          </div>
+          <p className="max-w-md text-sm leading-6 text-muted-foreground">
+            {lang === "de" ? "Zeiten nach Google Maps. Bitte vorab telefonisch bestätigen." : "Hours per Google Maps. Please confirm by phone."}
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-4 lg:grid-cols-[1fr_1fr]">
+          <article className="site-card p-7">
+            <div className="relative aspect-[16/7] overflow-hidden rounded-[22px] border border-[var(--site-outline)]">
+              <Image src="/images/opening-hours.jpg" alt="Opening hours" fill className="object-cover" />
+            </div>
+          </article>
+
+          <article className="site-card p-7">
+            <h3 className="text-2xl font-semibold tracking-[-0.04em]">{lang === "de" ? "Standort" : "Location"}</h3>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">{ADDRESS}</p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href={DIRECTIONS_URL} target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-[var(--site-red)] px-5 py-3 text-sm font-semibold text-white">
+                {lang === "de" ? "Route starten" : "Start route"}
+              </a>
+              <a href={MAPS_URL} target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-[#171412] px-5 py-3 text-sm font-semibold text-white">
+                {lang === "de" ? "In Google Maps öffnen" : "Open in Google Maps"}
+              </a>
+              <a href={telHref} className="inline-flex rounded-full border border-[var(--site-outline)] bg-white px-5 py-3 text-sm font-semibold">
+                {lang === "de" ? "Anrufen" : "Call"}
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -239,7 +282,7 @@ export function MtAvtoHome() {
             <div className="mt-8 space-y-4 text-sm text-white/88">
               <p>{ADDRESS}</p>
               <p><a className="underline" href={telHref}>{PHONE}</a></p>
-              <p>{t(lang, "hours")}: {t(lang, "hours_value")}</p>
+              <p>{lang === "de" ? "Mo–Fr 08:30–17:00, Sa 09:00–14:00, So geschlossen" : "Mon–Fri 08:30–17:00, Sat 09:00–14:00, Sun closed"}</p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={telHref} className="inline-flex rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#171412]">{t(lang, "cta_call")}</a>
