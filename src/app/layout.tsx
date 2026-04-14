@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Auto Service Landing",
-  description: "Automotive service landing page inspired by mt-avto.ru.",
+  title: "KFZ Sorentino | Werkstatt Frankfurt",
+  description: "KFZ Sorentino: Leistungen, Öffnungszeiten, Standort, 1‑Klick Anrufen/Route.",
 };
 
 export default function RootLayout({
