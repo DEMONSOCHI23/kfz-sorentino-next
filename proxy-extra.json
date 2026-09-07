@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "anysphere-binaries.s3.us-east-1.amazonaws.com",
+        "cloud-agent-artifacts.s3.us-east-1.amazonaws.com",
+        "cursor-cdn.com",
+        "cursor.com",
+        "cursor.sh",
+        "cursorapi.com",
+        "cursorvm.com"
+      ]
+    }
+  ]
+}
