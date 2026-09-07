@@ -7,6 +7,8 @@
         "aistudio.google.com",
         "anysphere-binaries.s3.us-east-1.amazonaws.com",
         "anthropic.com",
+        "api.anthropic.com",
+        "assets.anthropic.com",
         "bard.google.com",
         "blackbox.ai",
         "brawlstars.com",
@@ -15,6 +17,7 @@
         "chess.com",
         "chesscomfiles.com",
         "claude.ai",
+        "claude.com",
         "claudeusercontent.com",
         "cloud-agent-artifacts.s3.us-east-1.amazonaws.com",
         "cohere.com",
@@ -31,6 +34,7 @@
         "groq.com",
         "huggingface.co",
         "ideogram.ai",
+        "launchdarkly.com",
         "leonardo.ai",
         "luma.ai",
         "meta.ai",
@@ -45,8 +49,12 @@
         "pika.art",
         "poe.com",
         "pplx.ai",
+        "revenuecat.com",
         "runwayml.com",
+        "sentry.io",
         "sora.com",
+        "statsig.com",
+        "statsigapi.net",
         "suno.com",
         "supercell.com",
         "supercell.net",
@@ -56,11 +64,6 @@
         "udio.com",
         "x.ai",
         "you.com"
-      ]
-    },
-    {
-      "package_name": [
-        "com.anthropic.claude"
       ]
     }
   ]
