@@ -4,12 +4,18 @@
     {
       "domain_suffix": [
         "anysphere-binaries.s3.us-east-1.amazonaws.com",
+        "brawlstars.com",
         "cloud-agent-artifacts.s3.us-east-1.amazonaws.com",
         "cursor-cdn.com",
         "cursor.com",
         "cursor.sh",
         "cursorapi.com",
-        "cursorvm.com"
+        "cursorvm.com",
+        "supercell.com",
+        "supercell.net",
+        "supercellgames.com",
+        "supercellid.com",
+        "supercellstore.com"
       ]
     }
   ]
