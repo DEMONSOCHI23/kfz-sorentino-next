@@ -57,6 +57,11 @@
         "x.ai",
         "you.com"
       ]
+    },
+    {
+      "package_name": [
+        "com.anthropic.claude"
+      ]
     }
   ]
 }
